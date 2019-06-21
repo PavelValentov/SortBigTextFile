@@ -3,6 +3,8 @@ Generate a huge text file of the kind "Number. String". And sort this one.
 
 Developed in Embarcadero RAD Studio 10.3.1
 
+### Начало работы
+
     Git clone https://github.com/PavelValentov/SortBigTextFile.git
     
     cd ./SortBigTextFile/ 
