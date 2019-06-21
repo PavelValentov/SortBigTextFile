@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{34E5BDD5-B015-4862-880D-19699594F868}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Generator\TextFileGenerator.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Sorter\TextFileSorter.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TextFileGenerator">
+        <MSBuild Projects="Generator\TextFileGenerator.dproj"/>
+    </Target>
+    <Target Name="TextFileGenerator:Clean">
+        <MSBuild Projects="Generator\TextFileGenerator.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TextFileGenerator:Make">
+        <MSBuild Projects="Generator\TextFileGenerator.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TextFileSorter">
+        <MSBuild Projects="Sorter\TextFileSorter.dproj"/>
+    </Target>
+    <Target Name="TextFileSorter:Clean">
+        <MSBuild Projects="Sorter\TextFileSorter.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TextFileSorter:Make">
+        <MSBuild Projects="Sorter\TextFileSorter.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TextFileGenerator;TextFileSorter"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TextFileGenerator:Clean;TextFileSorter:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TextFileGenerator:Make;TextFileSorter:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
