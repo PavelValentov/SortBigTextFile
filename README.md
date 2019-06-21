@@ -1,7 +1,7 @@
 # SortBigTextFile
 Generate a huge text file of the kind "Number. String". And sort this one.
 
-Developed in Embarcadero RAD Studio 10.3.
+Developed in Embarcadero RAD Studio 10.3.1
 
     Git clone https://github.com/PavelValentov/SortBigTextFile.git
     
@@ -69,14 +69,19 @@ Developed in Embarcadero RAD Studio 10.3.
 
 Строки в полученном файле будут отсортированы по критерию: сначала сравнивается часть​ String​, если она совпадает, тогда​ Number.
 
-##### Архетектура решения утилиты:
+##### Архетектура решения приложения:
  
-Основная работа производится в отельном потоке **TGenerator**.
+Основная работа производится в отельном потоке **TSorter**.
 
 ```text
+После нажатия на кнопку *Sort* создается и запускается поток *TSorter*, наслдник класса *TThread*.
+На форме остается доступной только кнопка *Stop*.
+
+После формирования отсортированного файла поток уничтожается. Кнопка *Sort* снова становится доступной.
 ```
 
 ##### Архетектура решения библиотек сортировки:
 
 ```text
+Приложение в цикле сортирует блоки исходного текстового файла размером от BUFFER_STRINGS_COUNT до BUFFER_STRINGS_COUNT * 5 байт.
 ```
