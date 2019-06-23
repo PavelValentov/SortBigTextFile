@@ -1,4 +1,4 @@
-# SortBigTextFile
+## "SortBigTextFile" — Delphi application 
 Generate a huge text file of the kind "Number. String". And sort this one.
 
 Developed in Embarcadero RAD Studio 10.3.1
@@ -28,7 +28,7 @@ Developed in Embarcadero RAD Studio 10.3.1
 
 В результате работы утилиты получится файл **./database.txt**
 
-#### Архетектура решения утилиты:
+#### Архитектура решения утилиты:
  
 Основная работа производится в отельном потоке **TGenerator**.
 
@@ -71,7 +71,7 @@ Developed in Embarcadero RAD Studio 10.3.1
 
 Строки в полученном файле будут отсортированы по критерию: сначала сравнивается часть​ String​, если она совпадает, тогда​ Number.
 
-#### Архетектура решения приложения:
+#### Архитектура решения приложения:
  
 Для сортировки большого файла используется алгоритм *External Merge Sorting*.
 Основная работа производится в отельном потоке **TSorter**.
@@ -98,7 +98,7 @@ Developed in Embarcadero RAD Studio 10.3.1
 Результат записан в файл *DEST_FILE_NAME*. 
 ```
 
-#### Архетектура решения библиотек сортировки:
+#### Архитектура решения библиотек сортировки:
 
 ```text
 Для сортировки текстовых строк типа "TAltiumString"
