@@ -66,6 +66,8 @@ Developed in Embarcadero RAD Studio 10.3.1
 
 Утилита располагается в каталоге **./Sorter/**
 
+<img src='https://github.com/PavelValentov/SortBigTextFile/blob/master/Results/sorter.jpg' width=480>
+
 #### Работа с приложением
 
 После запуска в форме приложения доступна одна кнопка "Sort file"
