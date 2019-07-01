@@ -13,9 +13,8 @@ const
   WRITE_BUFFER_SIZE = 128 * 1024 * 1024; // bytes
   SORT_BUFFER_SIZE = 32 * 1024 * 1024; // bytes
   MAX_SORT_BUFFER_SIZE_MULTIPLIER = 3;
-  SOURCE_FILE_NAME = '../../../database.txt';
-  DEST_FILE_NAME = '../../../destdb.txt';
-  TEMP_FILE_NAME = '../../../tempdb.txt';
+  SOURCE_FILE_NAME = 'database.txt';
+  DEST_FILE_NAME = 'destdb.txt';
 
 type
   TLogEvent = procedure(msg: String) of object;

@@ -1,21 +1,23 @@
-## "SortBigTextFile" — Delphi application 
+## "SortBigTextFile" v. 2.1 — Delphi application 
 Generate a huge text file of the kind "Number. String". And sort this one.
 
 Developed in Embarcadero RAD Studio 10.3.1
 
 ### Начало работы
+В коммнадной строке терминала вводим последовательно команды: 
 
-    Git clone https://github.com/PavelValentov/SortBigTextFile.git
-    
-    cd ./SortBigTextFile/ 
-    
-    Open RAD Studio 10.3
-    
-    Open "ProjectGroup.groupproj" file 
+    > Git clone https://github.com/PavelValentov/SortBigTextFile.git    
+    > cd ./SortBigTextFile/   
+    > BDS.exe ProjectGroup.groupproj 
+
+В открывшейся среде Embarcadero RAD Studio Delphi для группы проекта выполняем команду "Build All".
+В результате в каталоге проекта компилируются 2 исполняемых файла:
+* TextFileGenerator.exe — генератор файла
+* TextFileSorter.exe — сортировщик файла
 
 ### Генератор огромного текстового файла
 
-Утилита располагается в каталоге **./Generator/**
+Исходные коды утилиты располагаются в каталоге **./Generator/**
 
 #### Работа с приложением
 

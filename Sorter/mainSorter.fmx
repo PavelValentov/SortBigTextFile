@@ -3,7 +3,7 @@ object fmMain: TfmMain
   Top = 0
   Caption = 'Sorter'
   ClientHeight = 220
-  ClientWidth = 384
+  ClientWidth = 502
   FormFactor.Width = 1440
   FormFactor.Height = 900
   FormFactor.Devices = [Desktop]
@@ -11,14 +11,14 @@ object fmMain: TfmMain
   OnDestroy = FormDestroy
   DesignerMasterStyle = 0
   object Header: TToolBar
-    Size.Width = 384.000000000000000000
+    Size.Width = 502.000000000000000000
     Size.Height = 48.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object HeaderLabel: TLabel
       Align = Contents
       StyledSettings = [Family, FontColor]
-      Size.Width = 384.000000000000000000
+      Size.Width = 502.000000000000000000
       Size.Height = 48.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = 'toollabel'
@@ -31,7 +31,7 @@ object fmMain: TfmMain
   object Footer: TToolBar
     Align = Bottom
     Position.Y = 172.000000000000000000
-    Size.Width = 384.000000000000000000
+    Size.Width = 502.000000000000000000
     Size.Height = 48.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'bottomtoolbar'
@@ -41,7 +41,7 @@ object fmMain: TfmMain
       StyledSettings = [Family, Size, Style]
       Margins.Left = 8.000000000000000000
       Margins.Right = 8.000000000000000000
-      Size.Width = 368.000000000000000000
+      Size.Width = 486.000000000000000000
       Size.Height = 48.000000000000000000
       Size.PlatformDefault = False
       TextSettings.FontColor = claCrimson
@@ -50,20 +50,20 @@ object fmMain: TfmMain
     end
   end
   object btSort: TButton
-    Position.X = 8.000000000000000000
-    Position.Y = 56.000000000000000000
-    Size.Width = 369.000000000000000000
-    Size.Height = 22.000000000000000000
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 502.000000000000000000
+    Size.Height = 49.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 2
-    Text = 'Sort file to "./../../../destdb.txt"'
+    Text = 'Sort file to "./destdb.txt"'
     OnClick = btSortClick
   end
   object btStop: TButton
-    Position.X = 8.000000000000000000
-    Position.Y = 88.000000000000000000
-    Size.Width = 369.000000000000000000
-    Size.Height = 22.000000000000000000
+    Align = Bottom
+    Position.Y = 128.000000000000000000
+    Size.Width = 502.000000000000000000
+    Size.Height = 44.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 6
     Text = 'Stop'

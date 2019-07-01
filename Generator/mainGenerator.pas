@@ -10,7 +10,7 @@ uses
 
 const
   BUFFER_STRINGS_COUNT = 4 * 1024 * 1024;
-  TEXT_FILE_NAME = '../../../database.txt';
+  TEXT_FILE_NAME = 'database.txt';
   // TEXT_FILE_NAME = 'database.txt';
 
 type
