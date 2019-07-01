@@ -19,6 +19,8 @@ Developed in Embarcadero RAD Studio 10.3.1
 
 Исходные коды утилиты располагаются в каталоге **./Generator/**
 
+<img src='https://raw.githubusercontent.com/vlang/v/master/examples/tetris/screenshot.png' width=300>
+
 #### Работа с приложением
 
 После запуска в форме приложения указываем
