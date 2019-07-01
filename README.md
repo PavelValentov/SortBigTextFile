@@ -64,7 +64,7 @@ Developed in Embarcadero RAD Studio 10.3.1
 
 ### Сортировщик огромного текстового файла
 
-Утилита располагается в каталоге **./Sorter/**
+Исходные коды утилиты располагаются в каталоге **./Sorter/**
 
 <img src='https://github.com/PavelValentov/SortBigTextFile/blob/master/Results/sorter.jpg' width=480>
 
