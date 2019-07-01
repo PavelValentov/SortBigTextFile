@@ -19,7 +19,7 @@ Developed in Embarcadero RAD Studio 10.3.1
 
 Исходные коды утилиты располагаются в каталоге **./Generator/**
 
-<img src='https://raw.githubusercontent.com/vlang/v/master/examples/tetris/screenshot.png' width=300>
+<img src='https://github.com/PavelValentov/SortBigTextFile/blob/master/Results/generator.jpg' width=480>
 
 #### Работа с приложением
 
