@@ -9,7 +9,7 @@ uses
   FMX.Controls.Presentation, FMX.Edit;
 
 const
-  BUFFER_STRINGS_COUNT = 1000000;
+  BUFFER_STRINGS_COUNT = 4 * 1024 * 1024;
   TEXT_FILE_NAME = '../../../database.txt';
   // TEXT_FILE_NAME = 'database.txt';
 
@@ -278,11 +278,25 @@ end;
 procedure TGenerator.Execute;
 
   function GetRandomInt64(): UInt64;
+  var
+    LTemp: UInt64;
+    LRange: Byte;
   begin
-    Int64Rec(result).Words[0] := Random(High(Word));
-    Int64Rec(result).Words[1] := Random(High(Word));
-    Int64Rec(result).Words[2] := Random(High(Word));
-    Int64Rec(result).Words[3] := Random(High(Word));
+    LTemp := 0;
+    LRange := Random(4);
+
+    Int64Rec(LTemp).Words[0] := Random(High(Word));
+
+    if LRange > 0 then
+      Int64Rec(LTemp).Words[1] := Random(High(Word));
+
+    if LRange > 1 then
+      Int64Rec(LTemp).Words[2] := Random(High(Word));
+
+    if LRange > 2 then
+      Int64Rec(LTemp).Words[3] := Random(High(Word));
+
+    result := LTemp;
   end;
 
 var
@@ -342,7 +356,7 @@ begin
           // fill the phrases bufer to save into a file
           LPhrases.Add(LPhrase);
           LFileSize := LFileSize + Length(LPhrase);
-          inc(LCount);
+          Inc(LCount);
 
           // Save next part of database
           if LPhrases.Count >= BUFFER_STRINGS_COUNT then

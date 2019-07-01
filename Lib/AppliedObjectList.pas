@@ -87,12 +87,8 @@ begin
   try
     SetLength(Target, Count);
 
-    for i := 0 to Count - 1 do
-    begin
-      Target[i] := Items[i];
-      // Target[i] := Items[i];
-    end;
-
+    Target := Self.ToArray;
+//    TArray.Copy<T>(Self.List, Target, Self.Count);
   finally
     FCS.Leave;
   end;
